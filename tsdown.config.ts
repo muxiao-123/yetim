@@ -7,6 +7,7 @@ export default defineConfig(() => {
     entry: {
       scripts: 'scripts/create-package.ts',
       test: 'test/index.ts',
+      'verdaccio-store': 'packages/verdaccio-store/index.ts',
     },
     // 跳过node_modules模块，默认项目中有
     skipNodeModulesBundle: true,

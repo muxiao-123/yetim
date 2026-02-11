@@ -21,7 +21,11 @@
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write --experimental-cli .",
     "build": "tsdown",
-    "create-package": "node dist/scripts/create-package.js"
+    "create-package": "node dist/scripts/create-package.js",
+    "create-store": "node dist/verdaccio-store/index.js"
+  },
+  "dependencies": {
+    "verdaccio": "^6.2.5"
   },
   "devDependencies": {
     "@clack/prompts": "^1.0.0",

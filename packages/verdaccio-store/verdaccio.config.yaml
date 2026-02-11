@@ -1,0 +1,42 @@
+# 存储所有包的目录路径
+storage: ./storage
+
+# 插件目录
+plugins: ./plugins
+
+web:
+  title: Verdaccio
+  # 可选的注释
+
+auth:
+  htpasswd:
+    file: ./htpasswd
+    # 最大注册用户数
+    max_users: 1000
+
+# 上游npm源
+uplinks:
+  npmjs:
+    url: 'https://registry.npmmirror.com/'
+    cache: true,
+
+packages:
+  '@*/*':
+    # 作用域包
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: npmjs
+
+  '**':
+    # 允许所有人访问
+    access: $all
+    # 允许认证用户发布
+    publish: $authenticated
+    unpublish: $authenticated
+    # 如果包不存在，代理到npmjs
+    proxy: npmjs
+
+# 日志设置
+logs:
+  - { type: stdout, format: pretty, level: http }
