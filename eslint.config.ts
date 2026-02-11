@@ -25,6 +25,7 @@ export default defineConfig(
       'ssr-testing/cases/*',
       'docs/.vitepress/dist/*',
       '!.*',
+      'packages/scaffold/template',
     ],
   },
   eslint.configs.recommended,
@@ -191,6 +192,7 @@ export default defineConfig(
       // ],
     },
   },
+  { files: ['*.vue'], rules: { 'no-useless-assignment': 'off' } },
   // json
   {
     files: ['*.json', '*.json5', '*.jsonc'],

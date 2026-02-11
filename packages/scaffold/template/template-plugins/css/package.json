@@ -1,0 +1,8 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "postcss-pxtorem": "^6.1.0",
+    "@types/postcss-pxtorem": "^6.1.0"
+  }
+}
