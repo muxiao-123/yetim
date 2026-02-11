@@ -1,0 +1,71 @@
+{
+  "name": "yetim",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.28.1",
+  "description": "",
+  "type": "module",
+  "keywords": [],
+  "license": "MIT",
+  "author": "muxiao-123",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muxiao-123/yetim.git"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "lint": "eslint . --ext .js,.ts,.md,.json --max-warnings 0 --cache --concurrency=auto",
+    "lint:test": "eslint . --max-warnings 0 --cache --concurrency=auto",
+    "lint:fix": "pnpm run lint --fix",
+    "format": "prettier --write --experimental-cli .",
+    "build": "tsdown",
+    "create-package": "node dist/scripts/create-package.js"
+  },
+  "devDependencies": {
+    "@clack/prompts": "^1.0.0",
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
+    "@eslint/js": "^10.0.1",
+    "@eslint/markdown": "^7.5.1",
+    "@types/node": "^25.2.2",
+    "commitizen": "^4.3.1",
+    "commitlint": "^20.4.1",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsonc": "^2.21.1",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-regexp": "^3.0.0",
+    "eslint-plugin-vue": "^10.7.0",
+    "globals": "^17.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "mri": "^1.2.0",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.8.1",
+    "tsdown": "^0.20.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">= 24"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": [
+      "eslint --fix --concurrency=auto",
+      "prettier --write --experimental-cli"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

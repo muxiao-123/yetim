@@ -1,0 +1,17 @@
+{
+  "name": "@yetim/test",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "muxiao-123",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.1",
+  "dependencies": {
+    "@yetim/utils": "workspace:*"
+  }
+}
