@@ -68,7 +68,8 @@
     "*.{vue,js,ts,jsx,tsx,md,json}": [
       "eslint --fix --concurrency=auto",
       "prettier --write --experimental-cli"
-    ]
+    ],
+    "packages/scaffold/template/**/*": []
   },
   "workspaces": [
     "packages/*"
