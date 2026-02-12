@@ -16,7 +16,7 @@
     "prepare": "husky",
     "commit": "git-cz",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
-    "lint": "eslint . --ext .js,.ts,.md,.json --max-warnings 0 --cache --concurrency=auto",
+    "lint": "eslint . --ext .vue,.js,.ts,.md,.json --max-warnings 0 --cache --concurrency=auto",
     "lint:test": "eslint packages/scaffold --max-warnings 0 --cache --concurrency=auto",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write --experimental-cli .",
