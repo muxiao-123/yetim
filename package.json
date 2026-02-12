@@ -22,10 +22,14 @@
     "format": "prettier --write --experimental-cli .",
     "build": "tsdown",
     "create-package": "node dist/scripts/create-package.js",
-    "create-store": "node dist/verdaccio-store/index.js"
+    "create-store": "node dist/verdaccio-store/index.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "verdaccio": "^6.2.5"
+    "verdaccio": "^6.2.5",
+    "vitepress": "^1.6.4"
   },
   "devDependencies": {
     "@clack/prompts": "^1.0.0",

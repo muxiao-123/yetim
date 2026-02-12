@@ -1,3 +1,9 @@
+# Package Manager
 node_modules
+# bundle
 dist
+# local env files
+# .local
 .eslintcache
+docs/.vitepress/cache
+docs-current
