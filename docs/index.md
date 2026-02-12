@@ -5,20 +5,20 @@ layout: home
 hero:
   name: 'yetim前端合集'
   text: '前端知识点合集'
-  tagline: My great project tagline
+  tagline: 受欢迎的文档
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 基础
+      link: /base
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 项目
+      link: /project
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 多项目
+    details: 覆盖，前端基建，性能优化，Web,移动端，小程序，h5,Electron，SSR等
+  - title: 知识点
+    details: 前端基础，框架，性能优化，网络，安全，部署，后台等
+  - title: 踩坑
+    details: 问题记录，产生原因以及解决方案
 ---
