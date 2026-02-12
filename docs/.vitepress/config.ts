@@ -1,9 +1,10 @@
 import { DefaultTheme, defineConfig } from 'vitepress'
-
+import { getSidebarItems } from './utils'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'yetim',
   description: '前端知识点合集',
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -28,12 +29,7 @@ function sideBarBase(): DefaultTheme.SidebarItem[] {
     {
       text: '基础',
       collapsed: false,
-      items: [
-        {
-          text: '',
-          link: '',
-        },
-      ],
+      items: getSidebarItems('base', 'Base'),
     },
   ]
 }
@@ -42,12 +38,7 @@ function sideBarIssue(): DefaultTheme.SidebarItem[] {
     {
       text: '问题',
       collapsed: false,
-      items: [
-        {
-          text: '',
-          link: '',
-        },
-      ],
+      items: getSidebarItems('issue', 'Issue'),
     },
   ]
 }
@@ -56,12 +47,7 @@ function sideBarProject(): DefaultTheme.SidebarItem[] {
     {
       text: '项目',
       collapsed: false,
-      items: [
-        {
-          text: '',
-          link: '',
-        },
-      ],
+      items: getSidebarItems('project', 'Project'),
     },
   ]
 }
