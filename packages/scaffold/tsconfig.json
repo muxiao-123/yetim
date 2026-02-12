@@ -2,6 +2,7 @@
   "include": ["tsdown.config.ts", "src", "test"],
   "exclude": ["template"],
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist",
     "target": "ES2023",
     "module": "Preserve",

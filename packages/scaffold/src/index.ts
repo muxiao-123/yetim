@@ -291,6 +291,7 @@ async function init() {
     if (root !== cwd) {
       doneMessage += `\n  cd ${cdProjectName.includes(' ') ? `"${cdProjectName}"` : cdProjectName}`
     }
+    doneMessage += `\n  git init`
     doneMessage += `\n  ${getInstallCommand(pkgManager).join(' ')}`
     doneMessage += `\n  ${getRunCommand(pkgManager, 'dev').join(' ')}`
     prompts.outro(doneMessage)

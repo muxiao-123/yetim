@@ -18,7 +18,7 @@ function renderTemplate(src: string, dest: string, callbacks: Callbacks) {
   const stats = fs.statSync(src)
 
   if (stats.isDirectory()) {
-    if (path.basename(src) === 'node_modules') {
+    if (path.basename(src) === 'node_modules' || path.basename(src) === 'dist') {
       return
     }
 
@@ -71,7 +71,9 @@ function renderTemplate(src: string, dest: string, callbacks: Callbacks) {
 
     return // 跳过复制文件
   }
-
+  if (filename === '.eslintcache') {
+    return
+  }
   fs.copyFileSync(src, dest)
 }
 

@@ -29,6 +29,11 @@ export const templateArr: Template[] = [
     display: 'Electron',
     color: picocolors.yellow,
   },
+  {
+    name: 'template-lib',
+    display: 'lib',
+    color: picocolors.green,
+  },
 ]
 export const templateUI: TemplateUI[] = [
   {
